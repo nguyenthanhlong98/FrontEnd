@@ -1,0 +1,19 @@
+package com.example.demo.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.Repository.RolePhanQuyen;
+
+@Service
+public class RoleService implements Rolepq {
+
+	@Autowired
+	private RolePhanQuyen pq;
+
+	@Override
+	public String timTenQuyen(String id) {
+		// TODO Auto-generated method stub
+		return pq.timTenQuyen(id);
+	}
+}

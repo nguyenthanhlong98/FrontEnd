@@ -1,0 +1,17 @@
+package com.example.demo.Repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import enity.Role;
+
+@Repository
+public interface RolePhanQuyen extends JpaRepository<Role, Long> {
+
+	@Query(value = "select name from role inner join tai_khoan on role.id=tai_khoan.role_id where username=?1", nativeQuery = true)
+	String timTenQuyen(String id);
+
+	
+	
+}

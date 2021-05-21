@@ -1,0 +1,5 @@
+package com.example.demo.service;
+
+public interface Rolepq {
+	public String timTenQuyen(String id);
+}
